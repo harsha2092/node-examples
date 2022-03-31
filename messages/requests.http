@@ -1,0 +1,17 @@
+### List all messages
+GET http://localhost:3000/messages
+
+### create a new message with proper body
+POST http://localhost:3000/messages
+content-type: application/json
+
+{
+    "content": "message after adding DI"    
+}
+
+### create a new message with empty
+POST http://localhost:3000/messages
+content-type: application/json
+
+### get a particular message
+GET http://localhost:3000/messages/51

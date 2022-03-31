@@ -1,0 +1,70 @@
+### create new user with proper data
+
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "this@session.com",
+    "password": "hello"
+}
+
+### signin
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "this@session.com",
+    "password": "hello"
+}
+
+### get currently signed in user
+GET http://localhost:3000/auth/whoami
+
+
+### signout
+POST http://localhost:3000/auth/signout
+
+### create new user with improper email
+
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "b@bc.com",
+    "password": "hello"
+}
+
+### create new user with improper password
+
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "b@bc.com"
+}
+
+### find user with particular id
+GET http://localhost:3000/auth/2
+
+
+### find user with particular email
+GET http://localhost:3000/auth?email=c@b.com
+
+
+### delete user with particular id
+DELETE http://localhost:3000/auth/1
+
+
+### update user with particular id
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "email": "c@b.com"
+}
+
+###set new color
+GET http://localhost:3000/auth/colors/blue
+
+###set new color
+GET http://localhost:3000/auth/colors
